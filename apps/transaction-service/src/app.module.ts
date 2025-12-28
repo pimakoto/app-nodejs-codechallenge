@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaModule } from './prisma';
 import { KafkaModule } from './kafka';
+import { TransactionsModule } from './transactions';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { KafkaModule } from './kafka';
     }),
     PrismaModule,
     KafkaModule,
+    TransactionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
