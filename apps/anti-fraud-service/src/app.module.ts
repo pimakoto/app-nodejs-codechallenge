@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { KafkaModule } from './kafka';
+import { FraudValidationModule } from './fraud-validation';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { KafkaModule } from './kafka';
       isGlobal: true,
     }),
     KafkaModule,
+    FraudValidationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
